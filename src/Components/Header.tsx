@@ -31,7 +31,12 @@ function Header(props: IMain) {
                     <hr/>
                     <ul className="social">
                         {props.social.map((item, i) => {
-                            return (<li key={i}><a className={item.className} href={item.url}/></li>)
+                            return (<li key={i}>
+                                {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
+                                <a href={item.url}/>
+                                <i className={item.className}>
+                                </i>
+                            </li>)
                         })}
                     </ul>
                 </div>

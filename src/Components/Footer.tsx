@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 function Footer(props: object) {
-    const [networks, setNetworks] = useState()
+    const networks = useState()
     return (
         <footer>
             <div className="row">
