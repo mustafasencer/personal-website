@@ -1,11 +1,12 @@
-import React from "react";
+import React, {RefObject} from "react";
 import {IMain} from "../Models/Header";
 
 function Header(props: IMain) {
 
-    const smoothScroll = () => {
-        console.log('on click!!!')
+    const ref: RefObject<any> = React.createRef();
 
+    const smoothScroll = () => {
+        ref.current.scrollIntoView({behavior: 'smooth'})
     }
 
     return (
@@ -17,18 +18,18 @@ function Header(props: IMain) {
                 <a className="mobile-btn" href="#home" title="Hide navigation">Hide navigation</a>
 
                 <ul id="nav" className="nav">
-                    <li className="current">
-                        <a className="smoothscroll" href="#home" onClick={smoothScroll}>Home</a>
+                    <li><a href="#home" onClick={smoothScroll}>Home</a>
                     </li>
-                    <li><a className="smoothscroll" href="#about">About</a></li>
+                    <li><a href="#about" onClick={smoothScroll}>About</a></li>
                     <li><a target="_blank" rel="noopener noreferrer"
-                           className="smoothscroll" href={process.env.PUBLIC_URL + '/CV.pdf'}>Resume</a>
+                           href={process.env.PUBLIC_URL + '/CV.pdf'}
+                           onClick={smoothScroll}>Resume</a>
                     </li>
                 </ul>
 
             </nav>
 
-            <div className="row banner">
+            <div className="row banner" ref={ref}>
                 <div className="banner-text">
                     <h1 className="responsive-headline">I'm {props.name}</h1>
                     <h3>I'm an {props.city} based

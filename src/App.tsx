@@ -6,22 +6,27 @@ import {IMain} from "./Models/Header";
 
 function App() {
     const [mainInfo, setMainInfo] = useState<IMain>({
-        name: "",
-        bio: "string",
-        email: "string",
-        city: "string",
-        phone: "string",
-        description: "",
-        occupation: "",
-        social: [],
-        address: {street: "", state: "", zip: 0}
-    })
+            name: "",
+            bio: "string",
+            email: "string",
+            city: "string",
+            phone: "string",
+            description: "",
+            occupation: "",
+            social: [],
+            address: {street: "", state: "", zip: 0}
+        }
+    )
 
     useEffect(() => {
-        fetch(process.env.PUBLIC_URL + '/resumeData.json', {method: "GET", headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            }})
+        fetch(process.env.PUBLIC_URL + '/resumeData.json',
+            {
+                method: "GET",
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                }
+            })
             .then(r => {
                 return r.json()
             })
