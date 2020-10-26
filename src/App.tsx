@@ -1,9 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import './App.css';
 import About from './Components/About';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
-import {IMain} from "./Models/Main";
+import {IMain} from "./Models/Header";
 
 function App() {
     const [mainInfo, setMainInfo] = useState<IMain>({
@@ -19,13 +18,15 @@ function App() {
     })
 
     useEffect(() => {
-        fetch('/resumeData.json', {method: "GET"})
+        fetch('/resumeData.json', {method: "GET", headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            }})
             .then(r => {
                 return r.json()
             })
             .then((jsonResponse) => {
                 const a = jsonResponse.main as IMain
-                console.log(a.social)
                 setMainInfo(a);
             })
             .catch(err => {
@@ -37,7 +38,7 @@ function App() {
         <div className="App">
             <Header {...mainInfo}/>
             <About {...mainInfo}/>
-            <Footer/>
+            <Footer {...mainInfo}/>
         </div>
     );
 }

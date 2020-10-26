@@ -1,10 +1,11 @@
-import React from 'react';
-import {IMain} from "../Models/Main";
+import React from "react";
+import {IMain} from "../Models/Header";
 
 function Header(props: IMain) {
 
     const smoothScroll = () => {
         console.log('on click!!!')
+
     }
 
     return (
@@ -16,26 +17,30 @@ function Header(props: IMain) {
                 <a className="mobile-btn" href="#home" title="Hide navigation">Hide navigation</a>
 
                 <ul id="nav" className="nav">
-                    <li className="current"><a className="smoothscroll" href="#home" onClick={smoothScroll}>Home</a>
+                    <li className="current">
+                        <a className="smoothscroll" href="#home" onClick={smoothScroll}>Home</a>
                     </li>
                     <li><a className="smoothscroll" href="#about">About</a></li>
-                    <li><a className="smoothscroll" href="#resume">Resume</a></li>
+                    <li><a target="_blank" rel="noopener noreferrer"
+                           className="smoothscroll" href={process.env.PUBLIC_URL + '/CV.pdf'}>Resume</a>
+                    </li>
                 </ul>
 
             </nav>
 
             <div className="row banner">
                 <div className="banner-text">
-                    <h1 className="responsive-headline">I'm {props.name}.</h1>
-                    <h3>I'm a {props.city} based <span>{props.occupation}</span>. {props.description}.</h3>
+                    <h1 className="responsive-headline">I'm {props.name}</h1>
+                    <h3>I'm an {props.city} based
+                        <span> {props.occupation}</span>.
+                        &nbsp;{props.description}</h3>
                     <hr/>
                     <ul className="social">
                         {props.social.map((item, i) => {
                             return (<li key={i}>
-                                {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
-                                <a href={item.url}/>
-                                <i className={item.className}>
-                                </i>
+                                <a target="_blank" rel="noopener noreferrer" href={item.url}>
+                                    <i className={item.className}>
+                                    </i></a>
                             </li>)
                         })}
                     </ul>
@@ -44,7 +49,8 @@ function Header(props: IMain) {
 
             <p className="scrolldown">
                 <a className="smoothscroll" href="#about">
-                    <i className="icon-down-circle"></i></a>
+                    <i className="icon-down-circle"></i>
+                </a>
             </p>
 
         </header>

@@ -1,13 +1,19 @@
-import React, {useState} from 'react';
+import React from 'react';
+import {IMain} from "../Models/Header";
 
-function Footer(props: object) {
-    const networks = useState()
+function Footer(props: IMain) {
     return (
         <footer>
             <div className="row">
                 <div className="twelve columns">
                     <ul className="social-links">
-                        {networks}
+                        {props.social.map((item, i) => {
+                            return (<li key={i}>
+                                <a target="_blank" rel="noopener noreferrer" href={item.url}>
+                                    <i className={item.className}>
+                                    </i></a>
+                            </li>)
+                        })}
                     </ul>
 
                     <ul className="copyright">

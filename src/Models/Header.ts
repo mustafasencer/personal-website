@@ -7,7 +7,6 @@ export interface IMain {
     occupation: string,
     description: string,
     social: Network[],
-    image?: string,
     contactmessage?: string,
     address: Address
 }
