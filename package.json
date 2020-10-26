@@ -33,7 +33,7 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "",
+  "homepage": "personal-website",
   "devDependencies": {
     "@types/react": "^16.9.53"
   }
