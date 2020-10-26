@@ -18,7 +18,7 @@ function App() {
     })
 
     useEffect(() => {
-        fetch('https://mustafasencer.github.io/personal-website/resumeData.json', {method: "GET", headers: {
+        fetch(process.env.PUBLIC_URL + '/resumeData.json', {method: "GET", headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
             }})
