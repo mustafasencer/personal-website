@@ -18,7 +18,7 @@ function App() {
     })
 
     useEffect(() => {
-        fetch('/resumeData.json', {method: "GET", headers: {
+        fetch('https://mustafasencer.github.io/personal-website/resumeData.json', {method: "GET", headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
             }})
