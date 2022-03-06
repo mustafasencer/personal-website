@@ -1,18 +1,8 @@
 {
   "main": {
-    "name": "Mustafa Sencer Özcan",
+    "name": "Mustafa \uD83D\uDC4B",
     "occupation": "Software Engineer",
-    "description": "Huge believer of institutional governance and its relevant benefits. Aside from that I write code.",
-    "bio": "I believe in every sense of democracy. Huge fan of parliamentary system. Mainly web developer with a diverse interest in Python, JS/TS and Go. Mainly focusing on VRP problems right now.",
-    "contactmessage": "Hey you can contact me via any active phone which possess my number in it.",
-    "email": "m.sencerozcan@gmail.com",
-    "phone": "+90**********",
-    "city": "Istanbul",
-    "address": {
-      "street": "Some street in İstanbul",
-      "city": "Some place near İstanbul",
-      "zip": "34 AZN 1994"
-    },
+    "city": "Berlin",
     "social": [
       {
         "name": "twitter",
@@ -33,11 +23,6 @@
         "name": "github",
         "url": "https://github.com/mustafasencer",
         "className": "fa fa-github"
-      },
-      {
-        "name": "skype",
-        "url": "http://skype.com",
-        "className": "fa fa-skype"
       }
     ]
   }
