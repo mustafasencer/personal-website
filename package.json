@@ -15,6 +15,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "lint": "eslint src --ext .tsx --ext .ts",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -35,6 +36,12 @@
   },
   "homepage": "/personal-website",
   "devDependencies": {
-    "@types/react": "^16.9.53"
+    "@types/react": "^16.9.53",
+    "@typescript-eslint/eslint-plugin": "4.22.0",
+    "@typescript-eslint/parser": "4.22.0",
+    "eslint": "7.24.0",
+    "eslint-config-prettier": "8.2.0",
+    "eslint-plugin-react": "^7.29.3",
+    "prettier": "2.2.1"
   }
 }
