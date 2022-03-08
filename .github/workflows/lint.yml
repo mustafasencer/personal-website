@@ -26,4 +26,4 @@ jobs:
         uses: wearerequired/lint-action@v1
         with:
           eslint: true
-          prettier: true
+          eslint_args: "src --ext .tsx --ext .ts"
