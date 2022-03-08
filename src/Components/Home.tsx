@@ -29,10 +29,6 @@ function Home(props: IMain) {
         <div className='banner-text'>
           <h1 className='responsive-headline'>I&apos;m {props.name}</h1>
           <h3>
-            {/*I&apos;m a {props.city} based*/}
-            {/*<span> {props.occupation}</span>,*/}
-            {/*<hr />*/}
-            {/*{props.description}*/}
             <img className='svg' src={process.env.PUBLIC_URL + '/images/golang-icon.svg'} alt='' />
             <img className='svg' src={process.env.PUBLIC_URL + '/images/python-icon.svg'} alt='' />
             <img className='svg' src={process.env.PUBLIC_URL + '/images/js-icon.svg'} alt='' />

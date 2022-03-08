@@ -20,10 +20,12 @@ const isLocalhost = Boolean(
   ),
 );
 
+/* eslint-disable */
 type Config = {
   onSuccess?: (registration: ServiceWorkerRegistration) => void;
   onUpdate?: (registration: ServiceWorkerRegistration) => void;
 };
+/* eslint-enable */
 
 export function register(config?: Config) {
   if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
