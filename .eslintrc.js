@@ -13,8 +13,10 @@ module.exports = {
     jest: true,
   },
   rules: {
-    '@typescript-eslint/interface-name-prefix': 'off',
     'curly': 'error',
+    "no-use-before-define": "off",
+    '@typescript-eslint/interface-name-prefix': 'off',
+    "@typescript-eslint/no-use-before-define": ["error"],
     'quotes': ['error', 'single', { 'avoidEscape': true, 'allowTemplateLiterals': false }],
   },
   settings: {
