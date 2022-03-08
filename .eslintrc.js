@@ -4,7 +4,6 @@ module.exports = {
     project: 'tsconfig.json',
     sourceType: 'module',
   },
-  plugins: ['@typescript-eslint/eslint-plugin'],
   extends: ['eslint:recommended', 'plugin:react/recommended', 'prettier'],
   root: true,
   env: {
@@ -15,7 +14,6 @@ module.exports = {
   },
   rules: {
     '@typescript-eslint/interface-name-prefix': 'off',
-    '@typescript-eslint/no-unused-vars': ['error', { 'ignoreRestSiblings': true }],
     'curly': 'error',
     'quotes': ['error', 'single', { 'avoidEscape': true, 'allowTemplateLiterals': false }],
   },
