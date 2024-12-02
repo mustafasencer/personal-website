@@ -14,15 +14,15 @@ module.exports = {
   },
   rules: {
     'curly': 'error',
-    "no-use-before-define": "off",
+    'no-use-before-define': 'off',
     '@typescript-eslint/interface-name-prefix': 'off',
-    "@typescript-eslint/no-use-before-define": ["error"],
+    '@typescript-eslint/no-use-before-define': ['error', { 'variables': false }],
     'quotes': ['error', 'single', { 'avoidEscape': true, 'allowTemplateLiterals': false }],
   },
   settings: {
     react: {
       pragma: 'React',
-      version: '6.14.6'
+      version: '6.14.6',
     },
     'import/resolver': {
       node: {
