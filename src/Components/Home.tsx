@@ -4,9 +4,9 @@ import { IMain } from '../Models/Home';
 function Home(props: IMain) {
   const ref: RefObject<any> = React.createRef();
 
-  const smoothScroll = () => {
-    ref.current.scrollIntoView({ behavior: 'smooth' });
-  };
+  // const smoothScroll = () => {
+  //   ref.current.scrollIntoView({ behavior: 'smooth' });
+  // };
 
   return (
     <header id="home">
