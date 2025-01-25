@@ -18,20 +18,13 @@ function Home(props: IMain) {
         <a className="mobile-btn" href="#home" title="Hide navigation">
           Hide navigation
         </a>
-        {/* <ul id="nav" className="nav">
-          <li>
-            <a target="_blank" rel="noopener noreferrer" href={process.env.PUBLIC_URL + '/CV.pdf'} onClick={smoothScroll}>
-              Resume
-            </a>
-          </li>
-        </ul> */}
       </nav>
 
       {/* MAIN CONTENT */}
       <div className="row banner" ref={ref}>
         <div className="banner-text">
           <h1 className="responsive-headline">I&apos;m {props.name}</h1>
-          <h2 className="responsive-headline">Seasoned Golang and Python software engineer! </h2>
+          <h2 className="responsive-headline">Interested in software surrounding the Python and Golang sphere... </h2>
           <h3>
             <img className="svg" src={process.env.PUBLIC_URL + '/images/golang-icon.svg'} alt="" />
             <img className="svg" src={process.env.PUBLIC_URL + '/images/python-icon.svg'} alt="" />
