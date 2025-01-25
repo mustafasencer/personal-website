@@ -1,6 +1,6 @@
 FROM node:alpine
 
-MAINTAINER Mustafa Sencer Özcan <m.sencerozcan@gmail.com>
+LABEL Mustafa Sencer Özcan <m.sencerozcan@gmail.com>
 
 ENV PORT 3000
 
